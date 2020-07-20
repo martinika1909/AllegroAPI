@@ -6,9 +6,9 @@ import java.util.Base64;
 
 import static io.restassured.RestAssured.given;
 
-public class Authentication
+class Authentication
 {
-    public static String getBearerToken()
+    static String getBearerToken()
     {
         String clientId = "50b3a36abf3f4def8e166f1acca9ed37";
         String clientSecret = "kJSrEbXIM44g9DRno1tfPGvsc0urw3r89YoSJsLNvrbitEzYWtnzXvOKFwqkqhwx";

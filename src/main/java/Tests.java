@@ -1,4 +1,3 @@
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,36 +23,36 @@ public class Tests
     @Test
     public void verifyChildCategories()
     {
-        categoriesAndParametersScenarios.verifyGettingChildCategories();
+        categoriesAndParametersScenarios.sendGetRequest(CategoriesAndParametersScenarios.ChildCategoryByParentCategory);
     }
 
     @Test
     public void verifyNotExistingParentCategory()
     {
-        categoriesAndParametersScenarios.verifyGettingCategoryWithNotExistingParent();
+        categoriesAndParametersScenarios.sendGetRequestNegativeCase(CategoriesAndParametersScenarios.ChildCategoryByParentCategory);
     }
 
     @Test
     public void verifyCategoryById()
     {
-        categoriesAndParametersScenarios.verifyGettingCategoryById();
+        categoriesAndParametersScenarios.sendGetRequest(CategoriesAndParametersScenarios.CategoryById);
     }
 
     @Test
     public void verifyNotExistingCategory()
     {
-        categoriesAndParametersScenarios.verifyGettingNotExistingCategory();
+        categoriesAndParametersScenarios.sendGetRequestNegativeCase(CategoriesAndParametersScenarios.CategoryById);
     }
 
     @Test
     public void verifyGettingCategoryParameters()
     {
-        categoriesAndParametersScenarios.verifyGettingCategoryParameters();
+        categoriesAndParametersScenarios.sendGetRequest(CategoriesAndParametersScenarios.CategoryParameters);
     }
 
     @Test
     public void verifyNotExistingCategoryParameters()
     {
-        categoriesAndParametersScenarios.verifyGettingNotExistingCategoryParameters();
+        categoriesAndParametersScenarios.sendGetRequestNegativeCase(CategoriesAndParametersScenarios.CategoryParameters);
     }
 }

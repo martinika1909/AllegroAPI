@@ -4,9 +4,9 @@ import org.junit.Assert;
 
 import static io.restassured.RestAssured.given;
 
-public class GetRequestHandler
+class GetRequestHandler
 {
-    public static Response sendGetRequest(String bearerToken, String getRequest, int expectedHttpCode)
+    static Response sendGetRequest(String bearerToken, String getRequest, int expectedHttpCode)
     {
         RestAssured.baseURI = "https://api.allegro.pl";
         Response response =
